@@ -1,6 +1,8 @@
+
 # CustomDataValidityGem
 
-TODO: Delete this and the text below, and describe your gem
+
+
 
 Ruby gem designed to provide flexible validation methods for common data types like email addresses, phone numbers, and postal codes. This gem is meant for use in Ruby applications where custom data validation is required.
 

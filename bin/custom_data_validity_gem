@@ -1,0 +1,44 @@
+#!/usr/bin/env ruby
+require 'optparse'
+require 'custom_data_validity_gem'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: custom_data_validity_gem [options]"
+
+  opts.on("-eEMAIL", "--email=EMAIL", "Validate an email address") do |email|
+    options[:email] = email
+  end
+
+  opts.on("-pPHONE", "--phone=PHONE", "Validate a phone number") do |phone|
+    options[:phone] = phone
+  end
+
+  opts.on("-zZIP", "--zip=ZIP", "Validate a postal code") do |zip|
+    options[:zip] = zip
+  end
+end.parse!
+
+if options[:email]
+  if CustomDataValidityGem::EmailValidator.valid?(options[:email])
+    puts "#{options[:email]} is a valid email address."
+  else
+    puts "#{options[:email]} is not a valid email address."
+  end
+end
+
+if options[:phone]
+  if CustomDataValidityGem::PhoneValidator.valid?(options[:phone])
+    puts "#{options[:phone]} is a valid phone number."
+  else
+    puts "#{options[:phone]} is not a valid phone number."
+  end
+end
+
+if options[:zip]
+  if CustomDataValidityGem::PostalCodeValidator.valid?(options[:zip])
+    puts "#{options[:zip]} is a valid postal code."
+  else
+    puts "#{options[:zip]} is not a valid postal code."
+  end
+end

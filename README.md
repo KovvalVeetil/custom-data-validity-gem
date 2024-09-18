@@ -1,28 +1,25 @@
-# Custom::Data::Validity::Gem
+# CustomDataValidityGem
 
 TODO: Delete this and the text below, and describe your gem
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/custom/data/validity/gem`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby gem designed to provide flexible validation methods for common data types like email addresses, phone numbers, and postal codes. This gem is meant for use in Ruby applications where custom data validation is required.
+
+To experiment with that code, run `bin/console` for an interactive prompt.
 
 ## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
 ```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
-
-If bundler is not being used to manage dependencies, install the gem by executing:
-
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+gem build custom-data-validity-gem.gemspec
+gem install custom-data-validity-gem-0.1.0.gem
 ```
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+require 'custom_data_validity_gem'
+```
 
 ## Development
 
